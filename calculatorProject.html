@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <div>
+    <label class="labels"> <input type="number" id="num1"></label> 
+    <button class="buttons" onclick="addNum()">+</button>
+    <label class="labels"> <input type="number" id="num2"></label><br>
+   </br>
+    <label class="labels"> <input type="number" id="num3"></label> 
+    <button class="buttons" onclick="subtractionNum()">-</button>
+    <label class="labels"> <input type="number" id="num4"></label><br>
+    </br>
+    <label class="labels"> <input type="number" id="num5"></label> 
+    <button class="buttons" onclick="multiplyNum()">*</button>
+    <label class="labels"> <input type="number" id="num6"></label><br>
+    </br>
+    <label class="labels"> <input type="number" id="num7"></label> 
+    <button class="buttons" onclick="divNum()">/</button>
+    <label class="labels"> <input type="number" id="num8"></label><br>
+    </br>
+    <p id="result1" >Your result is :
+    <label class="labels"> <input type="text" id="res" readonly></label>
+    <button class="buttons"  onclick="clearr()" id="Clear">Clear</button></p>
+    
+    </div>
+    
+      
+   
+    
+    <style>
+        .buttons {
+            background-color: rgb(0, 153, 255);
+            color: rgb(65, 78, 78);
+            border: 10px 10px; 
+            border-color:rgb(65, 78, 78);
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            
+            
+
+
+        }
+        .buttons:hover{
+            background-color: rgb(255, 72, 0);
+
+        }
+        .labels{
+            
+            border: 10px 10px;
+            border-color: black;
+            animation: fadeIn 1s ease-in-out forwards;
+            
+            
+            
+                
+        }
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 8px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color:#013220;
+            border-radius: 10px;
+            
+            
+        }
+        #Clear{
+            margin-left: 30px;
+        }
+        #result1{
+            font-family: Arial, sans-serif;
+            color: silver;
+            
+        }
+
+        body{
+            background-color: rgb(48, 44, 44);
+        }
+        
+
+
+
+    </style>
+    
+
+    <script>
+
+
+        function addNum(){
+       
+
+
+        let number1 = Number(document.getElementById("num1").value); 
+        let number2 = Number(document.getElementById("num2").value);
+        let result = document.getElementById("res").value += number1 + number2;
+
+        }
+        function subtractionNum(){
+            let number1 = Number(document.getElementById("num3").value); 
+            let number2 = Number(document.getElementById("num4").value);
+            let result = document.getElementById("res").value += number1 - number2;
+        }
+        function multiplyNum(){
+            let number1 = Number(document.getElementById("num5").value); 
+            let number2 = Number(document.getElementById("num6").value);
+            let result = document.getElementById("res").value += number1 * number2;
+        }
+
+        
+        function divNum(){
+            let number1 = Number(document.getElementById("num7").value); 
+            let number2 = Number(document.getElementById("num8").value);
+            let result = document.getElementById("res").value += number1 / number2;
+        }
+        function clearr(){
+            let reset = document.getElementById("res").value=null;
+        }
+    </script>
+
+
+</body>
+</html>
